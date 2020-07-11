@@ -1,4 +1,4 @@
-# Yixin-UI 易新UI轮子
+# Yixin-UI 易新UI框架
 
 ## 查看效果
 
