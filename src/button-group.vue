@@ -7,9 +7,9 @@
 <script>
     export default {
         mounted() {
-            for(let node of this.$el.children) {
+            for (let node of this.$el.children) {
                 let name = node.nodeName.toLowerCase()
-                if(name != 'button') {
+                if (name != 'button') {
                     console.warn(`g-button-group 中应该只含有 button, 而你的是 ${name}`)
                 }
             }
@@ -24,7 +24,10 @@
 
         > .g-button {
             border-radius: 0;
-            margin-left: -1px;
+
+            &:not(:first-child) {
+                margin-left: -1px;
+            }
 
             &:first-child {
                 border-top-left-radius: var(--border-radius);
