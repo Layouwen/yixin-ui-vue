@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>易新UI框架</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -22,22 +23,39 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
         }
+
         #app {
             margin: 20px;
         }
     </style>
     <style>
-
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <g-button/>
+    <g-button>
+        按钮
+    </g-button>
+    <g-button icon="settings">
+        按钮
+    </g-button>
+    <g-button icon="settings" icon-position="right">
+        按钮
+    </g-button>
 </div>
 
-<script src="./src/app.js"></script>
+<script src="src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1938004_z1d343c5b4m.js"></script>
 </body>
 </html>
