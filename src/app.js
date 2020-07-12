@@ -25,6 +25,7 @@ chai.use(spies)
 const expect = chai.expect
 
 {
+    // 测试是否含有i con
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
