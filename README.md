@@ -1,18 +1,50 @@
 # Yixin-UI 易新UI框架
 
-## 使用须知
+[![Build Status](https://travis-ci.org/Layouwen/Yixin-UI.svg?branch=master)](https://travis-ci.org/Layouwen/Yixin-UI)
 
-使用本框架需在 CSS 中开启 border-box
+## 介绍
 
-```css
-* {
-    box-sizing: border-box;
-}
-```
+这是一个在学习 Vue 过程中做的一个 UI 框架。希望可以对你们有所帮助。
 
 ## 开始使用
 
-[![Build Status](https://travis-ci.org/Layouwen/Yixin-UI.svg?branch=master)](https://travis-ci.org/Layouwen/Yixin-UI)
+1. 添加 CSS 样式
+
+    使用此框架前，请将`CSS`中的`border-box`开启。
+    
+    ```css
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    ```
+    
+    IE 8 及以上浏览器都支持此样式。
+    
+    以及还需要在`CSS`设置一些默认值（后续会升级为 `SCSS` 变量）
+    
+    ```css
+    :root {
+        --button-height: 32px;  // 按钮高度
+        --font-size: 14px;  // 字体大小
+        --button-bg: #fff;  // 按钮背景颜色
+        --button-active-bg: #eee;   // 按钮激活后背景颜色
+        --border-radius: 4px;   // 按钮边框角度
+        --color: #333;  // 按钮中的字体颜色
+        --border-color: #999;   // 按钮边框颜色
+        --border-color-hover: #666; // 按钮激活后边框颜色
+    }
+    ```
+    
+    IE 15 及以上浏览器都支持此样式。
+    
+2. 安装 YixinUI
+
+   ```bash
+   npm i --save YixinUI
+   ```
+
 
 ## 文档
 
