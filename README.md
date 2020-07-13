@@ -42,7 +42,7 @@
 2. 安装 YixinUI
 
    ```bash
-   npm i --save YixinUI
+   npm i yixin-ui
    ```
 
 
