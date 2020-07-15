@@ -45,6 +45,27 @@
    npm i yixin-ui
    ```
 
+3. 引入 YixinUI
+
+    ```js
+    import {Button, ButtonGroup, Icon} from 'yixin-ui'
+    import 'yixin-ui/dist/index.css'
+    
+    export default {   
+       name: 'app',
+       components: {
+           HelloWord,
+           'g-button': Button,
+           'g-icon': Icon
+       }
+    }
+    ```
+   
+4. 引入 svg symbols
+
+    ```
+    <script src="//at.alicdn.com/t/font_1938004_tsd90dw1wrp.js"></script>
+    ```
 
 ## 文档
 
