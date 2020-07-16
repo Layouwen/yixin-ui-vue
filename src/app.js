@@ -2,12 +2,13 @@ import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
+import Input from './input'
 import './svg'
 
 Vue.component('g-button', Button) // 重命名
 Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
-
+Vue.component('g-input', Input)
 
 new Vue({
     el: '#app',
