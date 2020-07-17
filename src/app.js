@@ -39,11 +39,18 @@ new Vue({
         message: 'hi'
     },
     methods: {
-        inputChange(e){
-            console.log(e.target.value)
-        },
-        showToast(){
-            this.$toast('你好')
+        showToast(position) {
+            this.$toast(`我是弹框你知道吗？`, {
+                position: 'bottom',
+                enableHtml: false,
+                closeButton: {
+                    text: '知道了',
+                    callback() {
+                        console.log(`已确认`)
+                    }
+                },
+                autoClose: 5,
+            })
         }
     },
 })
