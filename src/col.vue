@@ -24,7 +24,8 @@
             offset: {
                 type: [Number, String]
             },
-            ipad: {type: Object, validator},
+            pc: {type: Object, validator,},
+            ipad: {type: Object, validator,},
             narrowPc: {type: Object, validator,},
             widePc: {type: Object, validator,}
         },
