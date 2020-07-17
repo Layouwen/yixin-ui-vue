@@ -37,54 +37,37 @@
             margin: 20px;
         }
     </style>
-    <style>
-
-
-        .col[data-span="2"]{
-            width: 8.333333%;
-        }
-        .col[data-span="22"]{
-            width: 91.666667%;
-        }
-    </style>
 </head>
 <body>
-<div id="app">
-    <div style="border: 1px solid red;">
-        <g-row gutter="20">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-            <g-col>3</g-col>
-        </g-row>
+<style>
+    .demo {
+        height: 100px;
+        border: 1px solid #666;
+        background: #ddd;
+    }
+</style>
 
-        <g-row gutter="20">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-            <g-col>3</g-col>
-            <g-col>4</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="2">1</g-col>
-            <g-col span="22">2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="4">1</g-col>
-            <g-col span="20">2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="1">1</g-col>
-            <g-col span="5" offset="5"></g-col>
-            <g-col span="10" offset="3">2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="2">1</g-col>
-            <g-col span="20" offset="2">2</g-col>
-        </g-row>
-    </div>
+<div id="app">
+    <g-row>
+        <g-col span="24" :narrow-pc="{span:8}">
+            <div class="demo"></div>
+        </g-col>
+        <g-col span="24" :narrow-pc="{span:8}">
+            <div class="demo"></div>
+        </g-col>
+        <g-col span="24" :narrow-pc="{span:8}">
+            <div class="demo"></div>
+        </g-col>
+        <g-col span="24" :narrow-pc="{span:8}">
+            <div class="demo"></div>
+        </g-col>
+        <g-col span="24" :narrow-pc="{span:8}">
+            <div class="demo"></div>
+        </g-col>
+        <g-col span="24" :narrow-pc="{span:8}">
+            <div class="demo"></div>
+        </g-col>
+    </g-row>
 
     <hr>
     <div class="box">
