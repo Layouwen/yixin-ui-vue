@@ -38,6 +38,9 @@
         },
         methods: {
             onClick() {
+                if (this.disabled) {
+                    return
+                }
                 this.eventBus.$emit('update:selected', this.name, this)
                 this.$emit('click', this)
             }
@@ -56,10 +59,12 @@
         padding: 0 1em;
         height: 100%;
         cursor: pointer;
+
         &.active {
             font-weight: bold;
             color: $blue;
         }
+
         &.disabled {
             color: $disabled-text-color;
             cursor: not-allowed;
