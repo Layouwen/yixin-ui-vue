@@ -1,9 +1,10 @@
-import Toast from '../src/toast'
+import Toast from './toast'
+
 
 let currentToast
 
 export default {
-    install(Vue, options) {
+    install (Vue, options) {
         Vue.prototype.$toast = function (message, toastOptions) {
             if (currentToast) {
                 currentToast.close()
@@ -18,8 +19,9 @@ export default {
             })
         }
     }
-};
+}
 
+/* helpers */
 function createToast ({Vue, message, propsData, onClose}) {
     let Constructor = Vue.extend(Toast)
     let toast = new Constructor({propsData})
