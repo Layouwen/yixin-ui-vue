@@ -43,24 +43,12 @@ Vue.use(plugin)
 new Vue({
     el: '#app',
     data: {
-        loading1: false,
-        loading2: false,
-        loading3: false,
-        message: 'hi'
+        selectedTab: 'sports'
     },
     methods: {
-        showToast(position) {
-            this.$toast(`我是弹框你知道吗？`, {
-                position: 'bottom',
-                enableHtml: false,
-                closeButton: {
-                    text: '知道了',
-                    callback() {
-                        console.log(`已确认`)
-                    }
-                },
-                autoClose: 5,
-            })
+        yyy(data){
+            console.log('yy')
+            console.log(data)
         }
     },
 })
