@@ -15,7 +15,7 @@
         },
         props: {
             name: {
-                type: String | Number,
+                type: [String, Number],
                 required: true
             }
         },
@@ -36,8 +36,6 @@
 
 <style lang="scss" scoped>
     .tabs-pane {
-        &.active {
-            background: red;
-        }
+        padding: 1em;
     }
 </style>

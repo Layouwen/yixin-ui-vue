@@ -10,8 +10,5 @@
     }
 </script>
 
-<style scoped>
-    .tabs-body {
-
-    }
+<style lang="scss" scoped>
 </style>
