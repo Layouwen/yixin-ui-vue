@@ -1,12 +1,12 @@
 <template>
-    <div class="tabs-pane" :class="classes"  v-if="active">
+    <div class="tabs-pane" :class="classes" v-if="active">
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        name: "YixinTabsPane",
+        name: 'YixinTabsPane',
         inject: ['eventBus'],
         data() {
             return {
@@ -15,7 +15,7 @@
         },
         props: {
             name: {
-                type: String | Number,
+                type: [String, Number],
                 required: true
             }
         },
@@ -26,16 +26,19 @@
                 }
             }
         },
-        mounted() {
+        created() {
             this.eventBus.$on('update:selected', (name) => {
-                this.active = name === this.name;
+                this.active = name === this.name
             })
-        }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
     .tabs-pane {
         padding: 1em;
+
+        &.active {
+        }
     }
 </style>

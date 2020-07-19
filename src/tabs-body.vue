@@ -3,12 +3,15 @@
         <slot></slot>
     </div>
 </template>
-
 <script>
     export default {
-        name: "YixinTabsBody"
+        name: 'YixinTabsBody',
+        inject: ['eventBus'],
+        created(){
+        }
     }
 </script>
-
-<style lang="scss" scoped>
+<style>
+    .tabs-body {
+    }
 </style>

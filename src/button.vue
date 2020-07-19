@@ -1,7 +1,7 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
-        <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
-        <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
+        <yx-icon class="icon" v-if="icon && !loading" :name="icon"></yx-icon>
+        <yx-icon class="loading icon" v-if="loading" name="loading"></yx-icon>
         <div class="content">
             <slot/>
         </div>
@@ -13,7 +13,7 @@
     export default {
         name: 'YixinButton',
         components: {
-          'g-icon': Icon,
+          'yx-icon': Icon,
         },
         // props: ['icon', 'iconPosition']
         props: {

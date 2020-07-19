@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-header">
+    <div class="tabs-head">
         <slot></slot>
         <div class="line" ref="line"></div>
         <div class="actions-wrapper">
@@ -10,33 +10,48 @@
 
 <script>
     export default {
-        name: "YixinTabsHead",
+        name: 'YixinTabsHead',
         inject: ['eventBus'],
-        created(){
-            this.eventBus.$on('update:selected', (item, vm)=>{
+        mounted() {
+            this.eventBus.$on('update:selected', (item, vm) => {
                 let {width, height, top, left} = vm.$el.getBoundingClientRect()
                 this.$refs.line.style.width = `${width}px`
-                this.$refs.line.style.left = `${left}px`
+                let array = []
+                vm.$parent.$children.forEach((component, index) => {
+                    array.push(component.$el.getBoundingClientRect().width)
+                })
+                vm.$parent.$children.forEach((component, index) => {
+                    let width = 0
+                    if (index === 0) {
+                        this.$refs.line.style.left = `0px`
+                    } else {
+                        if (component.name === item) {
+                            for (let i = 0; i < index; i++) {
+                                width = width + array[i]
+                                this.$refs.line.style.left = `${width}px`
+                            }
+                        }
+                    }
+                })
             })
-        }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
     $tab-height: 40px;
-    $blue: blue;
+    $blue: #1890ff;
     $border-color: #ddd;
-    .tabs-header {
+    .tabs-head {
         display: flex;
-        justify-content: start;
-        align-items: center;
-        position: relative;
         height: $tab-height;
+        justify-content: flex-start;
+        position: relative;
         border-bottom: 1px solid $border-color;
 
         > .line {
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             border-bottom: 1px solid $blue;
             transition: all 300ms;
         }
@@ -44,8 +59,8 @@
         > .actions-wrapper {
             margin-left: auto;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             padding: 0 1em;
         }
     }

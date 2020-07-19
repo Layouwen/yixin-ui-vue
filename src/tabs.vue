@@ -8,11 +8,11 @@
     import Vue from 'vue'
 
     export default {
-        name: "YixinTabs",
+        name: 'YixinTabs',
         props: {
             selected: {
                 type: String,
-                required: true,
+                required: true
             },
             direction: {
                 type: String,
@@ -32,23 +32,33 @@
                 eventBus: this.eventBus
             }
         },
-        mounted() {
-            if (this.$children.length === 0) {
-                console && console.warn &&
-                console.warn('tabs的子组件应该是tabs-head和tabs-nav，但你没有写子组件')
-            }
-            this.$children.forEach((vm)=>{
-                if(vm.$options.name === 'YixinTabsHead') {
-                    vm.$children.forEach((childVm)=>{
-                        if(childVm.$options.name === 'YixinTabsItem' && childVm.name === this.selected) {
-                            this.eventBus.$emit('update:selected', this.selected, childVm)
-                        }
-                    })
+        methods: {
+            checkChildren() {
+                if (this.$children.length === 0) {
+                    console && console.warn && console.warn('tabs的子组件应该是tabs-head和tabs-nav，但你没有写子组件')
                 }
-            })
+            },
+            selectTab() {
+                this.$children.forEach((vm) => {
+                    if (vm.$options.name === 'YixinTabsHead') {
+                        vm.$children.forEach((childVm) => {
+                            if (childVm.$options.name === 'YixinTabsItem' && childVm.name === this.selected) {
+                                this.eventBus.$emit('update:selected', this.selected, childVm)
+                            }
+                        })
+                    }
+                })
+            }
+        },
+        mounted() {
+            this.checkChildren()
+            this.selectTab()
         }
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+    .tabs {
+
+    }
 </style>

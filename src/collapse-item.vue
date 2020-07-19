@@ -64,5 +64,6 @@
             > .title:last-child { border-bottom-left-radius: $border-radius; border-bottom-right-radius: $border-radius; }
         }
         > .content { padding: 8px; }
+
     }
 </style>

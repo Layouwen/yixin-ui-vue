@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" :class="toastClasses">
+    <div class="yixin-toast" :class="toastClasses">
         <div class="toast" ref="toast">
             <div class="message">
                 <slot v-if="!enableHtml"></slot>
@@ -19,7 +19,7 @@
         props: {
             autoClose: {
                 type: [Boolean, Number],
-                default: 5,
+                default: 50,
                 validator (value) {
                     return value === false || typeof value === 'number';
                 }
@@ -86,7 +86,7 @@
 <style scoped lang="scss">
     $font-size: 14px;
     $toast-min-height: 40px;
-    $toast-bg: rgba(0, 0, 0, 0.75);
+    $toast-bg: #2f2f2f;
     @keyframes slide-up {
         0% {opacity: 0; transform: translateY(100%);}
         100% {opacity: 1;transform: translateY(0%);}
@@ -99,7 +99,8 @@
         0% {opacity: 0; }
         100% {opacity: 1;}
     }
-    .wrapper {
+    .yixin-toast {
+        z-index: 100;
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -132,13 +133,14 @@
         font-size: $font-size; min-height: $toast-min-height; line-height: 1.8;
         display: flex;
         color: white; align-items: center; background: $toast-bg; border-radius: 4px;
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50); padding: 0 16px;
+         padding: 0 16px;
         .message {
             padding: 8px 0;
         }
         .close {
             padding-left: 16px;
             flex-shrink: 0;
+            cursor: pointer;
         }
         .line {
             height: 100%;

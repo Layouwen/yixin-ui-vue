@@ -3,11 +3,12 @@
         <slot></slot>
     </div>
 </template>
+
 <script>
     export default {
         name: 'YixinTabsItem',
         inject: ['eventBus'],
-        data () {
+        data() {
             return {
                 active: false
             }
@@ -18,48 +19,51 @@
                 default: false
             },
             name: {
-                type: String | Number,
+                type: [String, Number],
                 required: true
             }
         },
         computed: {
-            classes () {
+            classes() {
                 return {
                     active: this.active,
                     disabled: this.disabled
                 }
             }
         },
-        created () {
+        created() {
             if (this.eventBus) {
                 this.eventBus.$on('update:selected', (name) => {
-                    this.active = name === this.name;
+                    this.active = name === this.name
                 })
             }
         },
         methods: {
-            onClick () {
-                if (this.disabled) { return }
+            onClick() {
+                if (this.disabled) {return}
                 this.eventBus && this.eventBus.$emit('update:selected', this.name, this)
                 this.$emit('click', this)
             }
         }
     }
 </script>
+
 <style lang="scss" scoped>
-    $blue: blue;
+    $blue: #1890ff;
     $disabled-text-color: grey;
     .tabs-item {
         flex-shrink: 0;
         padding: 0 1em;
-        cursor: pointer;
         height: 100%;
         display: flex;
         align-items: center;
+        cursor: pointer;
+
         &.active {
             color: $blue;
             font-weight: bold;
         }
+
         &.disabled {
             color: $disabled-text-color;
             cursor: not-allowed;
