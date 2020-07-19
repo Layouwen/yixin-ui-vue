@@ -49,8 +49,4 @@ describe('Tabs', () => {
         })
     })
 
-    it('可以接受 direction prop', () => {
-
-    })
-
 })
