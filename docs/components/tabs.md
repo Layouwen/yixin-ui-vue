@@ -4,7 +4,9 @@
 
 默认选择 选项1、禁用选项2、可选择选项3
 
+<ClientOnly>
 <tabs-demo></tabs-demo>
+</ClientOnly>
 
 ## 代码
 

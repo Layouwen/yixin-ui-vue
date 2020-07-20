@@ -2,7 +2,9 @@
 
 ## click 弹出
 
+<ClientOnly>
 <popover-demo1></popover-demo1>
+</ClientOnly>
 
 ```html
   <yx-popover trigger="click" position="left" class="popover">
@@ -25,7 +27,9 @@
 
 ## hover 弹出
 
+<ClientOnly>
 <popover-demo2></popover-demo2>
+</ClientOnly>
 
 ```html
   <yx-popover trigger="hover" position="left" class="popover">

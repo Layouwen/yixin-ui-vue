@@ -2,7 +2,9 @@
 
 ## 默认展开
 
+<ClientOnly>
 <collapse-demo1></collapse-demo1>
+</ClientOnly>
 
 ```html
 <yx-collapse :selected.sync="tabs">
@@ -22,7 +24,9 @@ data(){
 
 ## 单选面板
 
+<ClientOnly>
 <collapse-demo2></collapse-demo2>
+</ClientOnly>
 
 ```html
 <xy-collapse :selected.sync="tabs" single >

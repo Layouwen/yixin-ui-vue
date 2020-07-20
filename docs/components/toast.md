@@ -2,7 +2,9 @@
 
 ## 基础用法
 
+<ClientOnly>
 <toast-demo1></toast-demo1>
+</ClientOnly>
 
 ```html
 <yx-button class="toast"  @click="showToast1">顶部提示</yx-button>
@@ -24,7 +26,9 @@ this.$toast('这是消息体C',{
 
 ## 确认后消失
 
+<ClientOnly>
 <toast-demo2></toast-demo2>
+</ClientOnly>
 
 ```html
 <yx-button class="toast" @click="showToast2">Toast</yx-button>

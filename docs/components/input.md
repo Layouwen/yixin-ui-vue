@@ -4,7 +4,9 @@
 
 分别为 默认输入框、禁用输入框1、禁用输入框2、警告输入框
 
+<ClientOnly>
 <input-demo></input-demo>
+</ClientOnly>
 
 ## 代码
 

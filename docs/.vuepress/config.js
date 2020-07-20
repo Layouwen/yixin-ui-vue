@@ -1,4 +1,5 @@
 module.exports = {
+  base: "Yixin-UI",
   title: '易新UI组件库',
   description: '一个好用的UI框架',
   themeConfig: {

@@ -2,7 +2,9 @@
 
 ## 布局一
 
+<ClientOnly>
 <layout-demo1></layout-demo1>
+</ClientOnly>
 
 ```html
 <yx-layout class="layout">
@@ -14,7 +16,9 @@
 
 ## 布局二
 
+<ClientOnly>
 <layout-demo2></layout-demo2>
+</ClientOnly>
 
 ```html
 <yx-layout class="layout">
@@ -29,7 +33,9 @@
 
 ## 布局三
 
+<ClientOnly>
 <layout-demo3></layout-demo3>
+</ClientOnly>
 
 ```html
 <yx-layout class="layout">

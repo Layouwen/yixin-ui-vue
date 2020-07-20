@@ -6,7 +6,9 @@
 
 使用单一分栏创建基础的栅格布局。
 
+<ClientOnly>
 <grid-demo1></grid-demo1>
+</ClientOnly>
 
 ## 代码
 

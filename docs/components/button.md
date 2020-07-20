@@ -6,7 +6,9 @@
 
 分别为 普通按钮、图标按钮、加载中按钮、禁用按钮、组合按钮
 
-<button-demo></button-demo>
+<ClientOnly>
+    <button-demo></button-demo>
+</ClientOnly>
 
 ## 代码
 
